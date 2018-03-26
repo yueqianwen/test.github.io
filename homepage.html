@@ -1,0 +1,272 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html manifest="./appcache.manifest">
+<head>
+	<title>现代蒙古文免费通用字体 - 转换规则征集意见</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,initial-scale=0.7,user-scalable=yes">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./fonts/xunifonts.online.otf.css" type="text/css" />
+	<link rel="stylesheet" href="./css/xunifont.css" type="text/css" />
+	<!--插件-->
+	<link rel="stylesheet" type="text/css" href="./xjmui/jmui.hs.mn/themes/default/jeui.css">
+	<link rel="stylesheet" type="text/css" href="./xjmui/jmui.hs.mn/themes/color.css">
+	<link rel="stylesheet" type="text/css" href="./xjmui/jmui.hs.mn/themes/icon.css">
+	<link rel="stylesheet" href="./css/ui.component.css" type="text/css" />
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jq.js"></script>
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./js/spin.js"></script>
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./xjmui/jmui.hs.mn/jmui.js"></script>
+	<!--数据相关-->
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./data/xunifont_rulekeywords.js"></script>
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./data/xunifont_uilabels.js"></script>
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./data/xunifont_allchars_version.js"></script>
+	<script type="text/javascript" language="javascript" charset="utf-8" id="dataversionscriptitem" src="./data/xunifont_allchars_1.0.0.js"></script>	<!--页面相关-->
+	<link rel="stylesheet" href="./css/allchars.css" type="text/css" />
+	<script type="text/javascript" language="javascript" charset="utf-8" src="./js/allchars.js"></script>
+	<script type="text/javascript" language="javascript">
+	     $(document).ready(function(){
+	        doInitializeForAllchars();
+	     });
+	</script>
+</head>
+
+<body>
+<div id='wx_pic' style='margin:0 auto;display:none;'><img src='./image/weixin.png' /></div>
+  <table border=0 width='100%' height='100%' class='allframetable'>
+  	<tr height='1px'>
+  		<td>
+  		  <div class='headerframe'>
+			  <div class='headernavi'>
+			  	   <div class='webtitle' uilang id='uiid_lbl_webtitle'>转换规则</div><span class='webtitle_ver' id='webtitle_ver'></span>
+			       <div id='changelangen' class='navi_en'  onClick="onChangeLanguageClick('en')">English</div>
+			       <div id='changelangzh' class='navi_zh' onClick="onChangeLanguageClick('zh')">中文</div>
+			       <div id='changelangmn' class='navi_mn mongolnormal' onClick="onChangeLanguageClick('mn')"></div>
+			   </div>
+			    <div class="widget_area_small">
+			        <div class="widget_area_small-line"></div>
+			    </div>
+			    <table width="100%" border=0 class="guolvtiaojiao_table">
+			        <tr>
+			            <td>
+			            	<div class='miaoshuyuyanframe'>
+				                <div class='checkbox_title' uilang id='uiid_lbl_miaoshuyuyan'>描述语言：</div>
+		                        <div class='checkbox'>
+		                            <input type="checkbox" name="msyy" id="msyy_mn" class="css-checkbox" value="1"/>
+		                            <label for="msyy_mn" class="css-label mongolnormal"><span class='ckbox_txt msyy_mn'></span></label>
+		                        </div>
+		                        <div class='checkbox'>
+		                            <input type="checkbox" name="msyy" id="msyy_zh" class="css-checkbox" value="2"/>
+		                            <label for="msyy_zh" class="css-label"><span class='ckbox_txt'>中文</span></label>
+		                        </div>
+		                        <div class='checkbox'>
+		                            <input type="checkbox" name="msyy" id="msyy_en" class="css-checkbox" value="3"/>
+		                            <label for="msyy_en" class="css-label"><span class='ckbox_txt'>English</span></label>
+		                        </div>
+		                        <div style="clear:both"></div>
+							</div>
+							<div class='guizeyuyanframe'>
+				                <div class='checkbox_title' uilang id='uiid_lbl_guizeyuyan'>规则语言：</div>
+		                        <div class='checkbox'>
+		                            <input type="checkbox" name="gzyy" id="gzyy_mn" class="css-checkbox" value="1"/>
+		                            <label for="gzyy_mn" class="css-label mongolnormal"><span class='ckbox_txt msyy_mn'></span></label>
+		                        </div>
+		                        <div class='checkbox'>
+		                            <input type="checkbox" name="gzyy" id="gzyy_zh" class="css-checkbox" value="2"/>
+		                            <label for="gzyy_zh" class="css-label"><span class='ckbox_txt'>中文</span></label>
+		                        </div>
+		                        <div class='checkbox'>
+		                            <input type="checkbox" name="gzyy" id="gzyy_en" class="css-checkbox" value="3"/>
+		                            <label for="gzyy_en" class="css-label"><span class='ckbox_txt'>English</span></label>
+		                        </div>
+		                        <div style="clear:both"></div>
+		                    </div>
+		          			<div class='versionframe'>
+		          				<div class='checkbox_title' uilang id='uiid_lbl_dataversion'>版本：</div>
+		          				<div class='checkbox_title'><select id="version_select" class="easyui-combobox" panelHeight="auto" style="width:100px;height:18px"></select></div>
+		          				<div class='editstate_title' id='uiid_lbl_datastate_editstate'></div>
+		          			</div>
+			            <div class='buttonframe'>
+		  		    		<div class='allopen'><a href="javascript:void(0);" uilang id="uiid_btn_openallchar" class="easyui-linkbutton easyui_linkbtn" iconCls="">全部打开</a></div>
+		  		    		<div class='allclose'><a href="javascript:void(0);" uilang id="uiid_btn_closeallchar" class="easyui-linkbutton easyui_linkbtn" iconCls="">全部关闭</a></div>
+		  		    		<div class='printfile'><a href="javascript:void(0);" uilang id="uiid_btn_printfile" class="easyui-linkbutton easyui_linkbtn" iconCls="">导出文件</a></div>
+			            </div>
+			        </tr>
+			     </table>
+			</div>
+  		</td>
+  	</tr>
+
+  	<tr valign='top'>
+  		<td>
+		    <div class='contentframe'>
+	    		<div class='uivertical uivertidiv' id='allcharframework'>
+	    		</div>
+		    </div>
+  		</td>
+  	</tr>
+  	<tr height='1px'>
+  		<td>
+		    <div class="footerframe">
+	        		    <div class='linkindex'><a href="index.html">网站首页</a></div>
+	        		    <div class='linkguobiao'><a href="governmentstandard.html" target='_blank'>国家标准</a></div>
+	        		    <div class='linkunicode'><a href="thenameoftheCharacter.html" target='_blank'>名义字符</a></div>
+	        		    <div class='linkcontrolchars'><a href="operationalCharacter.html" target='_blank'>控制字符</a></div>
+	        		    <div class='linkcontrolchars'><a href="AttachedtothewordofUtterances.html" target='_blank'>附词助词</a></div>
+	    				<div class='linkruletest'><a href="testcase.html" target='_blank'>测试用例</a></div>
+	        		    <div class='linktask'><a href="discusstheIssue.html"    target='_blank'>讨论问题</a></div>
+	        		    <div class='linkyuanze'><a href="editorBox.html"  target='_blank'>编辑原则</a></div>
+	        		    <div class='linkshuyu'><a href="explanationofNouns.html"   target='_blank'>名词解释</a></div>
+	        		    <div class='topology'><a href="toptaxy.html"   target='_blank'>拓扑关系</a></div>
+	        		    <div class='linkqa'><a href="scienceAnswers.html">科普问答</a></div>
+	        		    <div class='linkcontact'><a href="ContactUs.html"   target='_blank'>联系我们</a></div>
+		    </div>
+  		</td>
+  	</tr>
+  </table>
+
+
+<!--意见反馈 Dialog-->
+<div id="publishproposal_dialog_display" class="easyui-dialog en_publishproposal_dialog" closed="true">
+    <div class="dialog_char_area">
+
+    	<div id='dialog_allcharsframe'  usermail="" useralias="" >
+
+	   </div>
+	   <div class='dialog_sendmail'>
+        	<table width='100%' border=0>
+        		<tr>
+        			<td colspan=3>您的姓名  <span class='dialog_request'>* (必填，可写网名)</span></td>
+        		</tr>
+        		<tr>
+        			<td width='1px' colspan=3>
+        				<input id="mail_name" class="dialog_text_input" value=''>
+        			</td>
+        		</tr>
+        		<tr height='30px' valign='bottom'>
+        			<td colspan=3>您的邮箱  <span class='dialog_request'>* (必填，可联系到您的邮箱)</span></td>
+        		</tr>
+        		<tr>
+        			<td colspan=3>
+        				<input id="mail_address" class="dialog_text_input" value=''>
+        			</td>
+        		</tr>
+        		<tr height='30px' valign='bottom'>
+        			<td colspan=3>意见内容  <span class='dialog_request'>* (必填)</span></td>
+        		</tr>
+        		<tr>
+        			<td colspan=3>
+        				<textarea  id="mail_content" class='mongolnormal dialog_text_input' style="height:120px" valign='top'></textarea>
+        			</td>
+        		</tr>
+        		<tr height='30px' valign='bottom'>
+        			<td colspan=3>验 证 码  <span class='dialog_request'>* (必填)</span></td>
+        		</tr>
+        		<tr>
+        			<td width='30%'><input id="mail_code" class="dialog_text_input" value='' maxlength=4></td>
+        			<td width='30px' align='center'><img id="codepng" src="./docaptcha.php"/></td>
+        			<td width=''><span id="createcode" class="nolook">换一张</span></td>
+        		</tr>
+        	</table>
+       </div>
+        
+       <table width="100%">
+            <tr>
+                <td align="center">
+                	<a href="javascript:void(0);" id="publishproposal_send_btn" class="easyui-linkbutton easyui_linkbtn easyui_bigbtn" iconCls="icon-ok">发表建议</a>
+                	<a href="javascript:void(0);" id="publishproposal_closedialog_btn" class="easyui-linkbutton easyui_linkbtn" iconCls="icon-remove">取消</a>
+                </td>
+            <tr>
+       </table>
+    </div>
+</div>
+
+<!--规则统计 Dialog-->
+<div id="total_dialog_display" class="easyui-dialog en_total_dialog" closed="true">
+    <div class="dialog_char_area">
+    	<div id='dialog_total' class='dialog_total'>
+		       <table width="100%" class="dialog_totaltable">
+		        	<tr>
+		        		<td class="dialog_title">字母数量</td>
+		        		<td class="dialog_content"><span id='chars_num'></span></td>
+		        		<td class="dialog_title">变形数量</td>
+		        		<td class="dialog_content" colspan=1><span id='bianxing_num'></span></td>
+		        	</tr>
+		        	<tr>
+		        		<td class="dialog_title" rowspan=2>规则数量</td>
+		        		<td class="dialog_content" colspan=3>
+								独立规则：<span id='guize_duli_num'></span>
+						</td>
+		        	</tr>
+		        	<tr>
+		        		<td class="dialog_content" colspan=1 width='120px'>
+								词中规则：<span id='guize_cizhong_num'></span>
+						</td>
+						<td class="dialog_content" colspan=2>
+								默认变形：<span id='guize_cizhong_default_num'></span><br>
+								强制变形：<span id='guize_cizhong_force_num'></span>
+						</td>
+		        	</tr>
+			</table>
+	   </div>
+
+       <table width="100%">
+            <tr>
+                <td align="center" width='30%'>
+                	<a href="javascript:void(0);" id="total_closedialog_btn" class="easyui-linkbutton easyui_linkbtn" iconCls="icon-remove">关闭</a>
+                </td>
+            <tr>
+       </table>
+	</div>
+</div>
+
+<!--导出文件 Dialog-->
+<div id="printfile_dialog_display" class="easyui-dialog en_printfile_dialog" closed="true">
+    <div class="dialog_char_area">
+    	<div id='dialog_printfile' class='dialog_printfile'>
+			<form id="printfileform" method="post" action="doprint.php" target='_blank'>
+			   <input id="printfile_password" name="pwd" type="hidden" value='123456789'>
+		       <table width="100%" class="dialog_printfiletable">
+		        	<tr>
+		        		<td class="dialog_title">导出语言</td>
+		        		<td class="dialog_content">
+							<select id="printfile_lang" name="uilg" class="easyui-combobox" panelHeight="auto" style="width:150px;"></select>
+						</td>
+		        	</tr>
+		        	<tr>
+		        		<td class="dialog_title">导出版本</td>
+		        		<td class="dialog_content">
+							<select id="printfile_verison" name="ver" class="easyui-combobox" panelHeight="auto" style="width:150px;"></select>
+						</td>
+		        	</tr>
+		        	<tr>
+		        		<td class="dialog_title">打印封皮</td>
+		        		<td class="dialog_content">
+	                        <span class='checkbox'>
+	                            <input type="checkbox" name="iscover" id="printfengpi" class="css-checkbox" value="1" checked/>
+	                            <label for="printfengpi" class="css-label"><span class='ckbox_txt'>打印</span></label>
+	                        </span>
+						</td>
+		        	</tr>
+				</table>
+			</form>
+	   </div>
+       <table width="100%">
+            <tr>
+                <td align="center" width='30%'>
+                	<a href="javascript:void(0);" id="printfile_print_btn" class="easyui-linkbutton easyui_linkbtn" iconCls="icon-print">导出</a>
+                	<a href="javascript:void(0);" id="printfile_closedialog_btn" class="easyui-linkbutton easyui_linkbtn" iconCls="icon-remove">关闭</a>
+                </td>
+            <tr>
+       </table>
+	</div>
+</div>
+
+<!-- 对话框模板 -->
+<div id="dialoginformation" class="easyui-dialog eu_dialog" closed="true">
+</div>
+<div id="spinbusy"></div>
+</body>
+</html>
